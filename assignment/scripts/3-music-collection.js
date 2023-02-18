@@ -10,7 +10,7 @@ const addToCollection = (title, artist, yearPublished) => {
 
 
 addToCollection('Feels good to be me', 'Andy Grammer', 2022);
-addToCollection('Ed Sheeran', 'Sing', 2014);
+addToCollection('Sing', 'Ed Sheeran', 2014);
 addToCollection('Low', 'Flo Rida', 2007); 
 addToCollection('Bang', 'AJR', 2021);
 addToCollection('Light Switch', 'Charlie Puth', 2022);
@@ -25,6 +25,20 @@ const showCollection = (array) => {
     };
 };
 
-showCollection(collection)
 
+const findByArtist = (artist) => {
+    let findArtist = [];
+    for (x = 0; x < collection.length; x++) {
+        if (artist === collection[x].artist) {
+            findArtist.push(collection[x]);
+            console.log(findArtist);
+        }
+    } return findArtist;
+};
+
+
+showCollection(collection);
+findByArtist('Ed Sheeran');
+findByArtist('Andy Grammer');
+findByArtist('Jimmy Buffet');
 console.log(collection);
